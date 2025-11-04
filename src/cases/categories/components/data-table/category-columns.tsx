@@ -9,5 +9,21 @@ export const categoryColumns: ColumnDef<CategoryDTO>[] = [
     {
         accessorKey: 'name',
         header: 'Nome da Categoria'
-    }
+    },
+
+{
+id: 'actions'
+enableHiding: false,
+cell: ({ row }) => {
+    const category = row.original;
+    
+    return(
+        <div className="flex justify-end mr-4">
+            <DataTableAction itemId={category.id!} />
+
+        </div>
+    )
+}
+}
+
 ];
