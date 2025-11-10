@@ -8,13 +8,12 @@ export function CategoryDataTable() {
 
     return (
         <div>
-            {isLoading ? (
+            { isLoading ? (
                 <p>Carregando...</p>
             ) : (
-                <DataTable columns={categoryColumns} data={categories!} />s
-            )} 
-            
-              </div>
+                <DataTable columns={categoryColumns} data={categories!} />
+            )}
+        </div>
 
     )
 }

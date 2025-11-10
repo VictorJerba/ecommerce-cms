@@ -7,11 +7,14 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 
+
 type BreadCrumbProps = {
     title: string;
 }
 
-export function BreadCrumb({ title }: BreadCrumbProps) {
+export function BreadCrumb({
+    title
+}: BreadCrumbProps) {
     return (
         <Breadcrumb>
             <BreadcrumbList>
@@ -20,7 +23,9 @@ export function BreadCrumb({ title }: BreadCrumbProps) {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                    <BreadcrumbPage>{title}</BreadcrumbPage>
+                    <BreadcrumbPage>
+                        {title}
+                    </BreadcrumbPage>
                 </BreadcrumbItem>
             </BreadcrumbList>
         </Breadcrumb>
